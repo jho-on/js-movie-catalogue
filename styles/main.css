@@ -1,0 +1,22 @@
+:root{
+    --BGColor : #FBF6D9;
+    --detailColor: #F4AC36;
+    --textColor: #21181B;
+}
+
+@font-face {
+    font-family: ComicSans;
+    src: url(font/ComicSansMS3.ttf);
+}
+
+*{
+    box-sizing: border-box;
+    font-family: ComicSans, cursive, monospace;
+    background-color: var(--BGColor);
+    color: var(--textColor);
+    
+}
+
+body{
+    margin: 0;
+}

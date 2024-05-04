@@ -1,0 +1,86 @@
+header button{
+    border: 1px solid var(--textColor);
+    background-color: var(--detailColor);
+    height: 40px;
+    width: 80px;
+    font-size: 16px;
+
+    filter: brightness(100%);
+
+    transition-property: width, filter;
+    transition-duration: .3s;
+}
+header button:hover{
+    width:100px;
+    filter: brightness(120%);
+
+    transition-property: width, filter;
+    transition-duration: .2s;
+}
+
+#movieBlock{
+    display: grid;
+    grid-template-columns: auto 1fr;
+
+    margin: 10px;
+    padding: 10px;
+
+    border-top: 5px solid var(--detailColor);
+    border-left: 5px solid var(--detailColor);
+    border-bottom: 5px solid var(--textColor);
+    border-right: 5px solid var(--textColor);
+}
+
+#poster{
+    height: 450px;
+}
+
+#imageDiv{
+    height: 450px;
+} 
+
+#movieContent{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#movieContent h1{
+    margin: 0px 10px;
+    font-size: 35px;
+}
+
+#movieContent  p{
+    margin: 0px 20px;
+}
+#movieContent #genre{
+    font-size: 14px;
+    margin: 0px 15px;
+    opacity: .9;
+}
+
+#movieContent #plot{
+    text-align: left;
+    font-size: 20px;
+}
+
+#movieContent #ratings{
+    font-size: 17px;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+
+@media(max-width: 700px){
+    #movieBlock{
+        grid-template-columns: 1fr;
+        justify-items: center;
+    }
+}
+@media(max-width: 400px){
+    #poster{
+        width: 100%;
+    }
+}
