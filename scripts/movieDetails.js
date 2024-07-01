@@ -1,6 +1,8 @@
+let apiKey = 'YOUR-API-KEY-HERE';
+
 async function fetchData(){
     try{
-        const response = await fetch("https://www.omdbapi.com/?apikey=c0dc0267&type=movie&i=" + localStorage.getItem("clickedMovie") + '&plot=full');
+        const response = await fetch("https://www.omdbapi.com/?apikey=" + apiKey + "&type=movie&i=" + localStorage.getItem("clickedMovie") + '&plot=full');
         const data = await response.json()
         console.log(data)
         document.getElementById('poster').src = data.Poster;

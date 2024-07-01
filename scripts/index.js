@@ -1,4 +1,5 @@
 let movieBlock = document.getElementById("movieBlock");
+let apiKey = 'YOUR-API-KEY-HERE';
 
 function saveData(id){
     console.log(id);
@@ -10,7 +11,7 @@ async function fetchData(){
     try{
         const movieName = document.getElementById("movieName").value.toLowerCase();
         localStorage.setItem("searchInput", movieName);
-        const response = await fetch("https://www.omdbapi.com/?apikey=c0dc0267&type=movie&s=" + movieName);
+        const response = await fetch("https://www.omdbapi.com/?apikey=" + apiKey + "&type=movie&s=" + movieName);
             
         if(!response.ok){
             throw new Error("Could not fetch");
